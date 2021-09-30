@@ -7,7 +7,16 @@ export const Digit: FC<DigitProps> = (p) => {
   const dispatch = useDispatch();
 
   const { symbol, mnemonics } = p;
-  return (<div className="digit" onClick={() => dispatch(digitAppended(symbol))}>{symbol}
-    {typeof mnemonics === "string" ? (<div className="sub">{mnemonics}</div>) : null}
-  </div>)
+  return (
+    <div
+      className="digit"
+      onClick={() => dispatch(digitAppended(symbol))}
+    >{symbol}
+      {
+        typeof mnemonics === "string"
+          ? (<div className="sub">{mnemonics}</div>)
+          : null
+      }
+    </div>
+  );
 }

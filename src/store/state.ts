@@ -1,4 +1,4 @@
-type PhoneNumber = string;
+export type PhoneNumber = string;
 export type LineState = "online" | "engaged" | "connecting" | "disconnecting";
 export interface State {
   favorites: PhoneNumber[];

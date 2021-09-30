@@ -1,7 +1,9 @@
 import "./App.css";
+import { Bksp } from "./components/bksp/bksp";
 import { Digit } from "./components/digit/digit";
 import { DigitProps } from "./components/digit/digit-props";
 import { Display } from "./components/display/display";
+import { PlaceCall } from "./components/place-call/place-call";
 import { RowFrame } from "./components/row-frame/row-frame";
 const digit = (symbol: number | string, mnemonics?: string | undefined) => ({ symbol, mnemonics } as DigitProps);
 const settings: DigitProps[][] = [
@@ -18,10 +20,8 @@ function App() {
         {settings.map((r, ix) => (<RowFrame key={ix}>{r.map((d) => (<Digit key={d.symbol} {...d} />))}</RowFrame>))}
         <div className="botrow">
           <i className="fa fa-star-o dig" aria-hidden="true" />
-          <div id="call">
-            <i className="fa fa-phone" aria-hidden="true" />
-          </div>
-          <i className="fa fa-long-arrow-left dig" aria-hidden="true" />
+          <PlaceCall />
+          <Bksp />
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import  "./App.css"; 
+import { Display } from "./components/display/display";
 function App() {
   return (
 <div>
   <div className="container">
-    <div id="output" />
+    <Display />
     <div className="row">
       <div className="digit" id="one">1</div>
       <div className="digit" id="two">2

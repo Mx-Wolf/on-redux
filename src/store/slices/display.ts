@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserAppendedDigitToNumberPayload } from "../actions";
 
 export const {
   actions: {
@@ -14,9 +13,9 @@ export const {
 
     digitAppended(
       state,
-      action: PayloadAction<UserAppendedDigitToNumberPayload>,
+      action: PayloadAction<string | number>,
     ) {
-      return state + action.payload.digit;
+      return state + action.payload;
     },
 
     lastDigitRemoved(state) {

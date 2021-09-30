@@ -6,3 +6,5 @@ export const createStore = () => {
     reducer
   });
 }
+
+export type RootState = ReturnType<ReturnType<typeof createStore>["getState"]>

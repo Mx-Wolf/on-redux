@@ -1,4 +1,4 @@
-type PhoneNumber = bigint;
+type PhoneNumber = string;
 export interface State {
   favorites: PhoneNumber[];
   rejected: PhoneNumber[];

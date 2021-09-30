@@ -5,8 +5,7 @@ export const phoneListReducer = {
   add(state: PhoneNumber[], action: PayloadAction<PhoneNumber>) {
     return [...state, action.payload];
   },
-  remove(state: PhoneNumber[], action: PayloadAction<PhoneNumber>) {
-    const { payload } = action;
+  remove(state: PhoneNumber[], {payload}: PayloadAction<PhoneNumber>) {
     const index = state.findIndex((phone) => phone === payload);
     if (index < 0) {
       return state;

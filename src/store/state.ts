@@ -1,9 +1,10 @@
 type PhoneNumber = string;
+export type LineState = "online" | "engaged" | "connecting" | "disconnecting";
 export interface State {
   favorites: PhoneNumber[];
   rejected: PhoneNumber[];
   history: PhoneNumber[];
   display: PhoneNumber;
-  line: "online" | "engaged" | "connecting" | "disconnecting";
+  line: LineState;
 }
 //https://picsum.photos/id/{}/200/300

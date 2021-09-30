@@ -11,9 +11,14 @@ export const {
   name: "display",
   initialState: "" as string,
   reducers: {
-    digitAppended(state, action: PayloadAction<UserAppendedDigitToNumberPayload>) {
+
+    digitAppended(
+      state,
+      action: PayloadAction<UserAppendedDigitToNumberPayload>,
+    ) {
       return state + action.payload.digit;
     },
+
     lastDigitRemoved(state) {
       return state.slice(0, -1);
     }

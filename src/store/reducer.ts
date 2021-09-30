@@ -16,5 +16,12 @@ export const reducer = (
   action: UserAppendedDigitToNumber,
 ): State => {
   const workingState = ensureInitialized(state);
+  const {payload,type} = action;
+  switch(type){
+    case "USER_APPENDED_DIGIT_TO_NUMBER": return {
+      ...workingState, 
+      display: workingState.display + payload.digit,
+    };
+  }
   return workingState;
 }

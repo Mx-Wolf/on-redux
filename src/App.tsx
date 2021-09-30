@@ -1,4 +1,5 @@
 import "./App.css";
+import { AddFavStar } from "./components/add-fav-star/add-fav-star";
 import { Bksp } from "./components/bksp/bksp";
 import { Digit } from "./components/digit/digit";
 import { DigitProps } from "./components/digit/digit-props";
@@ -19,7 +20,7 @@ function App() {
         <Display />
         {settings.map((r, ix) => (<RowFrame key={ix}>{r.map((d) => (<Digit key={d.symbol} {...d} />))}</RowFrame>))}
         <div className="botrow">
-          <i className="fa fa-star-o dig" aria-hidden="true" />
+          <AddFavStar />
           <PlaceCall />
           <Bksp />
         </div>

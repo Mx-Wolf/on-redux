@@ -1,17 +1,19 @@
 import classNames from "classnames";
 import { FC } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import { checkTenDigitRule } from "../../helpers/ten-digit-rule";
+
 
 import classes from "./place-call.module.scss";
 
 export const PlaceCall: FC = () => {
-  const disabled = useSelector((state: RootState) => state.display.length !== 10);
+  const disabled = useSelector(checkTenDigitRule);
   return (
-    <div
+    <button
       className={classNames({ [classes["disabled"]]: disabled }, "call")}
+      disabled
     >
-      <i className="fa fa-phone" aria-hidden="true" />
-    </div>
+      <i className={classNames("fa fa-phone", classes["fa-phone"])} aria-hidden="true" />
+    </button>
   );
 }

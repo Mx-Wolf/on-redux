@@ -14,7 +14,7 @@ body {
 .dig {
   float: left;
   padding: 10px 30px;
-  width: 30px;
+  /*width: 30px;*/
   font-size: 2rem;
   cursor: pointer;
 }
@@ -29,17 +29,23 @@ body {
   width: 320px;
   padding: 20px;
   margin: 30px auto;
-  height: 420px;
-  text-align: center;
+  /*height: 420px;*/
+  /*text-align: center;*/
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.5rem;
 }
 
-#output {
+.output {
   font-family: "Exo";
   font-size: 2rem;
   height: 60px;
   font-weight: bold;
   color: #1976d2;
+  grid-column: span 3;
+  justify-self: center;
 }
 
 .call {
@@ -74,6 +80,6 @@ body {
   float: left;
   padding: 10px 20px;
   margin: 10px;
-  width: 30px;
+  /*width: 30px;*/
   cursor: pointer;
 }

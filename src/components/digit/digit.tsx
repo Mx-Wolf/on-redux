@@ -8,15 +8,10 @@ export const Digit: FC<DigitProps> = (p) => {
 
   const { symbol, mnemonics } = p;
   return (
-    <div
+    <button
       className="digit"
       onClick={() => dispatch(digitAppended(symbol))}
-    >{symbol}
-      {
-        typeof mnemonics === "string"
-          ? (<div className="sub">{mnemonics}</div>)
-          : null
-      }
-    </div>
+    >{symbol}<div className="sub">{typeof mnemonics === "string"?mnemonics:"\xa0"}</div>
+    </button>
   );
 }

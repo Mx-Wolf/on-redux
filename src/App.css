@@ -83,3 +83,28 @@ body {
   /*width: 30px;*/
   cursor: pointer;
 }
+.contact {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 0.5rem;
+  align-items: center;
+}
+.contact img {
+  width: 3rem;
+  height: 3rem;
+}
+.contact h2 {
+  font-size: 1rem;
+}
+.disconnect {
+  background-color: rgba(255,32,32,0.8);
+  display: inline-block;
+  margin: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.disconnect:disabled{
+  background-color: rgba(255,32,32,0.3);;
+}

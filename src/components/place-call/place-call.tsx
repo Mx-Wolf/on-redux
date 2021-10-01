@@ -1,11 +1,12 @@
 import classNames from "classnames";
 import { FC } from "react";
-import { useDisableByTenDigitRule } from "../../store/hooks/use-disable-by-ten-digit-rule";
+import { useCallableFlag } from "../../store/hooks/use-callable-flag";
 
 import classes from "./place-call.module.scss";
 
 export const PlaceCall: FC = () => {
-  const disabled = useDisableByTenDigitRule()
+  const disabled = useCallableFlag();
+
   return (
     <button
       className={classNames({ [classes["disabled"]]: disabled }, "call")}

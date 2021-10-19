@@ -5,6 +5,7 @@ import { useDisableByTenDigitRule } from "../../store/hooks/use-disable-by-ten-d
 import { useFavRule } from "../../store/hooks/use-fav-rule";
 import { useFavorableValue } from "../../store/hooks/use-favorable-value";
 import { add, remove } from "../../store/slices/favorites";
+import { makePhone } from "../../store/state";
 
 import classes from "./add-fav-star.module.scss";
 
@@ -18,7 +19,7 @@ export const AddFavStar: FC = () => {
       className={classNames("fa fa-star-o dig", { [classes["favorite"]]: favorite })}
       aria-hidden="true"
       disabled={disabled}
-      onClick={() => dispatch(favorite ? remove(current) : add(current))}
+      onClick={() => dispatch(favorite ? remove(makePhone(current)) : add(makePhone(current)))}
     />
   );
 }

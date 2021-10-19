@@ -5,7 +5,7 @@ interface FavorableProps {
 }
 const EMPTY_LITERAL = "";
 export const getFavorableValue = (
-  state: FavorableProps,
-) => checkTenDigitRule(state)
-    ? state.display
+  {display}: FavorableProps,
+) => checkTenDigitRule(display)
+    ? display
     : EMPTY_LITERAL;

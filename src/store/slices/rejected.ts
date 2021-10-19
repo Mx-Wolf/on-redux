@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { PhoneNumber } from "../state";
 import { phoneListReducer } from "./phone-list";
 
 export const {
@@ -9,6 +10,6 @@ export const {
   reducer,
 } = createSlice({
   name: "rejected",
-  initialState: [] as string[],
+  initialState: [] as PhoneNumber[],
   reducers: phoneListReducer,
 });

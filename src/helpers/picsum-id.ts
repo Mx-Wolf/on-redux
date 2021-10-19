@@ -5,4 +5,4 @@ interface PicsumProps{
   display:string;
 }
 export const INVALID_PICSUM_ID = "";
-export const getPicsumId = (state:PicsumProps)=>checkTenDigitRule(state)?simple1000(state.display):INVALID_PICSUM_ID;
+export const getPicsumId = ({display}:PicsumProps)=>checkTenDigitRule(display)?simple1000(display):INVALID_PICSUM_ID;

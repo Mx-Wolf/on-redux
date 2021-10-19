@@ -18,7 +18,6 @@ const settings: DigitProps[][] = [
 ]
 function App() {
   return (
-    <div>
       <div className="container">
         <Contact />
         <Disonnect />
@@ -30,7 +29,7 @@ function App() {
           <Bksp />
         </Fragment>
       </div>
-    </div>
+
 
   );
 }
